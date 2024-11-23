@@ -18,6 +18,8 @@ cachetools==5.5.0
     #   streamlit
 certifi==2024.8.30
     # via requests
+chardet==5.2.0
+    # via -r requirements.in
 charset-normalizer==3.4.0
     # via requests
 click==8.1.7
