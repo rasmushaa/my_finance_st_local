@@ -37,7 +37,7 @@ with open("frontend/app_assets/your_banking_file1.csv", "rb") as file:
     btn = st.download_button(
         label="Download CSV1",
         data=file,
-        file_name='your_bank_file1.csv',
+        file_name='your_banking_file1.csv',
         mime='text/csv',
     )
 with open("frontend/app_assets/your_banking_file2.csv", "rb") as file:
