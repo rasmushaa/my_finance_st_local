@@ -64,3 +64,12 @@ if st.button('Login', icon=":material/login:"):
 
     st.session_state['user'] = User(id=1, name=name, role=role, is_logged_in=True) 
     st.switch_page('frontend/banking/file_input.py')
+
+
+st.subheader(':orange[If you are having problems using this Application, try to delete the cached data from previous sessions]')
+if st.button('Reset All', icon=":material/cached:"):
+    st.success('Removed old Database, and AI model!')
+    if os.path.exists('my_finance.db'):
+        os.remove('my_finance.db')
+    if os.path.exists('ai_model.pkl'):
+        os.remove('ai_model.pkl')
