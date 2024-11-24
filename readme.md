@@ -59,11 +59,13 @@ Streamlit’s modular nature makes it easy to add new pages. Simply follow the s
 
 ## Machine Learning Model  
 
-This project represents the **fourth iteration** of my banking file processor.  
+This project represents the **fourth iteration** of my banking file processor and I have tested multiple different solutions.  
 
 - **Model Selection**: After experimenting with various algorithms, **Naive Bayes** proved the most effective for this application.  
   - It performs well with limited and highly variable data, which is typical for banking transaction files.  
-  - Alternatives such as Random Forests, Boosted Trees, and Neural Networks showed minimal benefits while adding unnecessary complexity.  
+  - Alternatives such as Random Forests, Boosted Trees, and Neural Networks with more advanced Features showed minimal benefits while adding unnecessary complexity.  
+
+To test the actual model and to see what it actually does, try to run `ml_test.ipynb` with included **test-data.csv** or use your own.
 
 ---
 

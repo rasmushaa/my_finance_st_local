@@ -59,11 +59,11 @@ col1, col2, col3 = st.columns([10, 2, 13])
 
 with col1:
     st.subheader('Total Equity')
+    collector.cash = st.number_input('Cash', value=0, min_value=0)
+    collector.apartment = st.number_input('Apartment', value=0, min_value=0)
     collector.capital_assets_purchase_price = st.number_input('Capital Assets Purchase price', value=0, min_value=0)
     collector.unrealized_capital_gains = st.number_input('Capital Assets Unrealized Gains', value=0)
     collector.capital_assets_value = collector.unrealized_capital_gains + collector.capital_assets_purchase_price # No need to ask user to sum this
-    collector.apartment = st.number_input('Apartment', value=0, min_value=0)
-    collector.cash = st.number_input('Cash', value=0, min_value=0)
     collector.other_assets = st.number_input('Other-Assets', value=0, min_value=0)
 
     st.subheader('Total Liabilities')
@@ -76,15 +76,15 @@ with col1:
 with col3:
     fig = go.Figure()
 
-    add_trace('Mortgage', collector.mortgage , fig, color='rgb(179, 0, 0)')
+    add_trace('Mortgage', collector.mortgage , fig, color='rgb(255, 26, 26)')
     add_trace('Student loan', collector.student_loan , fig, color='rgb(230, 0, 0)')
-    add_trace('other_loans', collector.other_loans , fig, color='rgb(255, 26, 26)')
+    add_trace('other_loans', collector.other_loans , fig, color='rgb(179, 0, 0)')
 
-    add_trace('Cash', collector.cash, fig, color='rgb(0, 77, 0)')
-    add_trace('Apartment', collector.apartment, fig, color='rgb(0, 102, 0)')
+    add_trace('Cash', collector.cash, fig, color='rgb(0, 200, 0)')
+    add_trace('Apartment', collector.apartment, fig, color='rgb(0, 153, 0)')
     add_trace('Capital Assets', collector.capital_assets_purchase_price, fig, color='rgb(0, 128, 0)')
-    add_trace('Unrealized Gains', collector.unrealized_capital_gains, fig, color='rgb(0, 153, 0)')
-    add_trace('Other-Assets', collector.other_assets, fig, color='rgb(0, 200, 0)')
+    add_trace('Unrealized Gains', collector.unrealized_capital_gains, fig, color='rgb(0, 102, 0)')
+    add_trace('Other-Assets', collector.other_assets, fig, color='rgb(0, 77, 0)')
 
     fig.update_layout(barmode='relative',height=800)
     st.plotly_chart(fig, use_container_width=True)
