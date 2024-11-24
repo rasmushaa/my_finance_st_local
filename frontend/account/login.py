@@ -19,7 +19,8 @@ col1.markdown('''This online Application helps you to\\
               automatically process your Banking files :moneybag:\\
               with a help of an AI :robot_face:''')
 
-col1.markdown('The code <>')
+url = 'https://github.com/rasmushaa/my_finance_st_local'
+col1.markdown('The code [link](%s)' % url)
 col1.markdown('- Is easy to make it yours :handshake:')
 col1.markdown('- Builds an actual Local SQL Database :floppy_disk:')
 col1.markdown('- Allows you to analyse your data with *PowerBI*, *LookerStudio*, *Ecxel* :bar_chart:')
